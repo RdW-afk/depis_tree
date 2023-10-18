@@ -7,9 +7,13 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_X00TD.mk
+    $(LOCAL_DIR)/afterlife_X00TD.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_X00TD-user \
-    derp_X00TD-userdebug \
-    derp_X00TD-eng
+    afterlife_X00TD-userdebug
+
+PRODUCT_MAKEFILES += \
+    $(LOCAL_DIR)/derp_X00TD.mk
+
+COMMON_LUNCH_CHOICES += \
+    derp_X00TD-userdebug 

@@ -13,9 +13,15 @@ $(call inherit-product, device/asus/sdm660-common/sdm660.mk)
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
-# Overlays
+ifeq ($(strip $(PRODUCT_NAME)), "derp_X00TD")
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-derp
+endif
+
+ifeq ($(strip $(PRODUCT_NAME)), "afterlife_X00TD")
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+endif
 
 # PRODUCT_SHIPPING_API_LEVEL indicates the first api level, device has been commercially launched on.
 PRODUCT_SHIPPING_API_LEVEL := 27
